@@ -7,15 +7,17 @@ mismo según el porcentaje de respuestas correctas que ha obtenido, y sabiendo q
  */
 
 fun main(){
-    print("Ingrece el porsentaje:")
-    val porsentaje = readLine()!!.toInt()
-    if (porsentaje >= 90)
-        print("Nivel máximo")
+    print("Ingrese cantidad de preguntas")
+    val cantidad_preguntas = readln().toInt()
+    print("Ingrese cantidad de respuestas")
+    val porsentaje = readln().toDouble()
+    val porcentaje = (porsentaje.toDouble() / cantidad_preguntas)*100
+        println("Nivel máximo")
     if (porsentaje >= 75 && porsentaje <= 90)
-        print("Nivel medio")
-    if (porsentaje >= 50 && porsentaje <= 75)
-        print("Nivel regular")
-    if (porsentaje <= 50)
-        print("Fuera de nivel")
+        println("Nivel medio")
+    else if (porsentaje >= 50 && porsentaje <= 75)
+        println("Nivel regular")
+    else (porsentaje <= 50)
+        println("Fuera de nivel")
 
 }
